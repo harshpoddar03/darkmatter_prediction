@@ -110,15 +110,14 @@ def draw_circle_and_calculate_intensity(img, center, radius):
 
     return intensity_values
 
-
-
+from tqdm import tqdm
 
 def get_images(directory):
     # Get all the npy files in the directory
     files = glob.glob(directory + '/*.npy')
     
     data = []
-    for filename in files:
+    for filename in tqdm(files, desc='Loading images', unit='image', total=len(files)):
         with open(filename, 'rb') as f:
             # Load the npy file content into a numpy array
             data.append(np.load(f))
