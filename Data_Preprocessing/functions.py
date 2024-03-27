@@ -51,7 +51,7 @@ def centroid(image):
 
 def calculate_radiuses():
     radiuses = {}
-    for rad in range(80):
+    for rad in range(200):
 
         x_bases_array =[]
         y_bases_array = []
@@ -77,12 +77,12 @@ def calculate_radiuses():
 
 
 
-
+radiuses = calculate_radiuses()
 
 def draw_circle_and_calculate_intensity(img, center, radius):
 
     
-    radiuses = calculate_radiuses()
+    
 
     x_peremeters_360 = radiuses[radius][0] + center[0]
     y_peremeters_360 = radiuses[radius][1] + center[1]
