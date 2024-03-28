@@ -9,3 +9,4 @@ multiclass_model/
 *.zip
 *.npy
 *.h5
+*.pyc
