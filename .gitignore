@@ -12,5 +12,6 @@ multiclass_model/
 *.npy
 *.h5
 *.pyc
+*.bin
 
 03_Model/ensemble_model/*.bin
