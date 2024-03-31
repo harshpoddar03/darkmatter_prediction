@@ -1,13 +1,16 @@
-03_Model/ensemble_model/*.bin
 data/
 train/
 val/
+
 binary_model_0_1/
 binary_model_0_2/
 binary_model_1_2/
 multiclass_model/
+
 *.pkl
 *.zip
 *.npy
 *.h5
 *.pyc
+
+03_Model/ensemble_model/*.bin
