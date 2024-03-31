@@ -1,3 +1,4 @@
+03_Model/ensemble_model/*.bin
 data/
 train/
 val/
