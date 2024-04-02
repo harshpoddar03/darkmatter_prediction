@@ -47,7 +47,7 @@ def centroid(image):
     return centroid
 
 
-
+## optimised the data_processing code 400 times faster by vectorizing the code
 
 def calculate_radiuses():
     radiuses = {}
@@ -63,9 +63,6 @@ def calculate_radiuses():
                 x_bases_array.append(x_base)
                 y_bases_array.append(y_base)
 
-
-        # x_bases_array = np.array(x_bases_array)
-        # y_bases_array = np.array(y_bases_array)
 
         x_bases_array = np.array(x_bases_array).astype(int)
         y_bases_array = np.array(y_bases_array).astype(int)
