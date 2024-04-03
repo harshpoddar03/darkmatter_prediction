@@ -174,11 +174,7 @@ Lensing and Machine Learning](https://arxiv.org/pdf/2005.05353.pdf)
 - [S. Birrer | Probing Dark Matter and Dark Energy with Strong Gravitational Lensing](https://www.youtube.com/watch?v=Y8khPqI_foM)
 - [Measuring the mass function of dark matter subhalos with ALMA observations of gravitationally lensed](https://www.youtube.com/watch?v=kJXTq4sAOv4)
 
-## Other Resources
 
-- [Notebook 1](./path/to/notebook1.ipynb)
-- [Notebook 2](./path/to/notebook2.ipynb)
-- [Notebook 3](./path/to/notebook3.ipynb)
 
 
 
@@ -260,7 +256,7 @@ DenseNet, short for Densely Connected Convolutional Networks, is a network archi
 - **Architecture**: DenseNet has a unique architecture where each layer receives input from all preceding layers and passes on its own feature-maps to all subsequent layers. This creates a highly connected network.
 - **Performance**: The network has several advantages such as reducing the vanishing-gradient problem, strengthening feature propagation, encouraging feature reuse, and substantially reducing the number of parameters.
 
-For more details, please refer to the [DenseNet paper](https://arxiv.org/abs/1608.06993).
+
 
 ### Usage
 
@@ -310,6 +306,8 @@ class DenseNet201(nn.Module):
 
 
 ```
+
+For more details, please refer to the [DenseNet paper](https://arxiv.org/abs/1608.06993).
 
 
 ## LSTM
@@ -467,4 +465,21 @@ def erosion_dilation(erosion_iter=1, dilation_iter=1, kernel_size=(3,3)):
 ```
 <br>
 <br>
+
+
+### Why DenseNet Performed better than ResNet?
+
+| Feature | DenseNet | ResNet |
+|---------|----------|--------|
+| **Architecture** | Connects each layer to every other layer in a feed-forward fashion. | Uses skip connections to add the output from an earlier layer to a later layer. |
+| **Feature Reuse** | High due to direct connections among all layers, leading to efficient feature propagation. | Lower, as layers are connected through summation without direct feature reuse. |
+| **Parameter Efficiency** | High, achieves similar or better performance with fewer parameters due to dense connectivity. | Lower compared to DenseNet, requires more parameters to achieve comparable performance. |
+| **Gradient Flow** | Improved gradient flow helps in reducing the vanishing gradient problem, facilitating deeper network training. | Good gradient flow due to skip connections, but may not be as efficient as DenseNet in very deep networks. |
+| **Performance in Limited Data Scenarios** | Often performs better due to efficient use of parameters and feature reuse. | Might require more data to achieve similar performance levels. |
+| **Model Size** | Generally smaller, more compact models due to parameter efficiency. | Larger models due to increased parameter count. |
+
+
+
+
+
 
